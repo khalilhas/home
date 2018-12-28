@@ -223,7 +223,7 @@
               for(var i = 0 ; i < 3 ; i++)
               {
                 document.getElementById("repos_"+(i+1)).innerHTML = data[i].name;
-                document.getElementById("reposdesc_"+(i+1)).innerHTML = data[i].description;
+                document.getElementById("reposdesc_"+(i+1)).innerHTML = data[i].description.substring(0, 55) + "...";
               }
             });
           </script>
