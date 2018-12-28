@@ -101,6 +101,7 @@
       <div class="container">
         <div class="section-heading text-center">
           <h2>Unlimited Features, Unlimited Fun</h2>
+          
           <p class="text-muted">Check out what you can do with this app theme!</p>
           <hr>
         </div>
@@ -126,8 +127,8 @@
                 <div class="col-lg-6">
                   <div class="feature-item">
                     <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>Device Mockups</h3>
-                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                    <h3 id="repos_1">Device Mockups</h3>
+                    <p class="text-muted" id="reposdesc_1">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -216,7 +217,15 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
-
+    <script>
+             // github
+             $.getJSON('https://api.github.com/users/khalilhas/repos', function(data) {
+              var reposName = data[0].name;
+              var reposDesc = data[0].description;
+              document.getElementById("repos_1").innerHTML = reposName;
+              document.getElementById("reposdesc_1").innerHTML = reposName;
+            });
+          </script>
   </body>
 
 </html>
