@@ -436,7 +436,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 @font-face {
   font-family: EraserDust;
-  src: url(../font/EraserDust.ttf);
+  src: url(../fonts/EraserDust.ttf);
 }
 .eraser{
   font-family: EraserDust;
