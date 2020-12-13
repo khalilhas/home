@@ -158,9 +158,7 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #7b4397;
-  background: url("../img/bg-pattern.png"), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg.jpg")
 }
 
 header.masthead .header-content {
@@ -436,3 +434,56 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   font-size: 11px;
   padding: 15px 45px;
 }
+@font-face {
+  font-family: EraserDust;
+  src: url(../font/EraserDust.ttf);
+}
+.eraser{
+  font-family: EraserDust;
+}
+.works{
+  width:130px;
+  height: 200px;
+}
+/* Word Cloud */
+/* fonts */
+
+div.jqcloud {
+  font-size: 10px;
+  line-height: normal;
+}
+
+div.jqcloud a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+div.jqcloud span.w10 { font-size: 550%; }
+div.jqcloud span.w9 { font-size: 500%; }
+div.jqcloud span.w8 { font-size: 450%; }
+div.jqcloud span.w7 { font-size: 400%; }
+div.jqcloud span.w6 { font-size: 350%; }
+div.jqcloud span.w5 { font-size: 300%; }
+div.jqcloud span.w4 { font-size: 250%; }
+div.jqcloud span.w3 { font-size: 200%; }
+div.jqcloud span.w2 { font-size: 150%; }
+div.jqcloud span.w1 { font-size: 100%; }
+
+/* colors */
+
+div.jqcloud { color: #fff; }
+div.jqcloud span.w10 { color: #fff; }
+div.jqcloud span.w9 { color: #fff; }
+div.jqcloud span.w8 { color: #fff; }
+div.jqcloud span.w7 { color: #fff; }
+div.jqcloud span.w6 { color:  #fff; }
+div.jqcloud span.w5 { color:  #fff; }
+div.jqcloud span.w4 { color: #fff; }
+div.jqcloud span.w3 { color: #fff; }
+div.jqcloud span.w2 { color: #fff; }
+div.jqcloud span.w1 { color: #fff; }
+
+
+
+/* layout */
+
