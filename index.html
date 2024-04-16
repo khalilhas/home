@@ -26,6 +26,33 @@
     <!-- Custom styles for this template -->
     <!--<link href="css/new-age.min.css" rel="stylesheet">-->
     <link href="css/new-age.css" rel="stylesheet">
+    <style>
+        /* CSS Cards test */
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .feature-item img:hover{
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-item img{
+          transition: transform 0.3s ease-in-out;
+        }
+        .feature-item img:hover .feature-item img{
+          transform: scale(1.1);
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
   </head>
 
   <body id="page-top">
@@ -201,39 +228,49 @@
           <h2>Programming Projects</h2>
           <hr>
         </div>
-        <div class="row">
-          <div class="card bg-dark text-white">
-            <img class="card-img" src="keito.png" alt="Card image">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Keito</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                  <img src="keito.png" class="card-img-top" alt="Project Image 1" onclick="showImage('keito.png')">
+                  <div class="card-body">
+                      <h5 class="card-title">Keito</h5>
+                      <p class="card-text">Description of the project or image details.</p>
+                      <p><b>Libraries:</b>Libraries: PyVisa, Qt, Matplotlib, Numpy…</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="card bg-dark text-white">
-            <img class="card-img" src="image_processing.png" alt="Card image">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Keito</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                  <img src="image_processing.png" class="card-img-top" alt="Image processing" onclick="showImage('image_processing.png')">
+                  <div class="card-body">
+                      <h5 class="card-title">CFTEM</h5>
+                      <p class="card-text">Automated image-processing program able to extract relevant geometric parameters including contact angle and width from NANO MAXTEM videos.</p>
+                      <p><b>Libraries:</b> OpenCV, Qt, Matplotlib, Numpy, Scikit-image, Scipy…</p>
+                    </div>
+              </div>
           </div>
-        </div>
-        <div class="row">
-          
-          <div class="card bg-dark text-white">
-            <img class="card-img" src="image_processing 2.png" alt="Card image">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Keito</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                  <img src="image_processing 2.png" class="card-img-top" alt="Image processing" onclick="showImage('image_processing 2.png')">
+                  <div class="card-body">
+                      <h5 class="card-title">Nanomax</h5>
+                      <p class="card-text">Image processing software for the images of NANOMAX. </p>
+                      <p><b>Libraries:</b> OpenCV, Qt, Matplotlib, Numpy, Scikit-image, Scipy…</p>
+                  </div>
+              </div>
+          </div>
           </div>
         </div>
     </section>
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="img-fluid" alt="Enlarged Image">
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="contact bg-primary" id="contact">
       <div class="container">
         <h2>I
@@ -260,10 +297,13 @@
       </div>
     </footer>
     <script>
-      function cv_clicked() {
-          alert('Contact: khalil.hassebi@sorbonne-universite.fr')
+      function showImage(src) {
+          var modalImg = document.getElementById('modalImage');
+          modalImg.src = src;
+          var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+          myModal.show();
       }
-      </script>
+    </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
