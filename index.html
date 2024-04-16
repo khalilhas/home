@@ -51,6 +51,14 @@
         .card:hover .card-img-top {
             transform: scale(1.1);
         }
+        .corner-img {
+            position: absolute;
+            top: 10px; /* Adjust based on your needs */
+            right: 10px; /* Adjust based on your needs */
+            width: 50px; /* Size of the corner image */
+            height: auto;
+            z-index: 10;
+        }
     </style>
 </head>
   </head>
@@ -236,6 +244,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card">
                   <img src="keito.png" class="card-img-top" alt="Project Image 1" onclick="showImage('keito.png')">
+                  <img src="logo_c2n.png" class="corner-img" alt="Logo">
                   <div class="card-body">
                       <h5 class="card-title">Keito</h5>
                       <p class="card-text">Software to control the experimental conditions in NANO MAXTEM using protocols such as GPIB. </p>
@@ -246,6 +255,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
               <div class="card">
                   <img src="image_processing.png" class="card-img-top" alt="Image processing" onclick="showImage('image_processing.png')">
+                  <img src="logo_c2n.png" class="corner-img" alt="Logo">
                   <div class="card-body">
                       <h5 class="card-title">CFTEM</h5>
                       <p class="card-text">Automated image-processing program able to extract relevant geometric parameters including contact angle and width from NANO MAXTEM videos.</p>
@@ -256,6 +266,7 @@
           <div class="col-lg-4 col-md-6 mb-4">
               <div class="card">
                   <img src="image_processing 2.png" class="card-img-top" alt="Image processing" onclick="showImage('image_processing 2.png')">
+                  <img src="logo_c2n.png" class="corner-img" alt="Logo">
                   <div class="card-body">
                       <h5 class="card-title">Nanomax</h5>
                       <p class="card-text">Image processing software for the images of NANOMAX. </p>
